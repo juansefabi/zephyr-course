@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "west build",
+            "type": "shell",
+            "command": "/Users/juansebastianfabi/zephyrproject/.venv/bin/west build -p auto -b nucleo_f401re -- -DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": []
+        },
+        {
+            "label": "west flash",
+            "type": "shell",
+            "command": "/Users/juansebastianfabi/zephyrproject/.venv/bin/west flash",
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Zephyr Debug",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "configFiles": [
+                "/opt/homebrew/share/openocd/scripts/interface/stlink.cfg",
+                "/opt/homebrew/share/openocd/scripts/target/stm32f4x.cfg"
+            ],
+            "searchDir": ["/opt/homebrew/share/openocd/scripts"],
+            "executable": "${workspaceFolder}/build/zephyr/zephyr.elf",
+            "runToEntryPoint": "main",
+            "preLaunchTask": "west build",
+            "gdbPath": "/Users/juansebastianfabi/zephyr-sdk-0.17.4/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb",
+            "openOCDLaunchCommands": [
+                "init",
+                "reset halt"
+            ]
+        }
+    ]
+}
+
+/* nucleo_l432kc */
+/* stm32l4x.cfg */
